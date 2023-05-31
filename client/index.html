@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MEN testing</title>
+</head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<body onload="fetchData()">
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello, User</h1>
+        </div>
+    </div>
+
+    <div class="container mb-5" style="font-size: 2.5vh;">
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div class="mb-3">
+                    <label for="inputId" class="form-label">ID</label>
+                    <input type="number" class="form-control" id="inputId" aria-describedby="emailHelp value"
+                        placeholder="Enter ID">
+                </div>
+                <div class="mb-3">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="inputDepartment" class="form-label">Department</label>
+                    <input type="text" class="form-control" id="inputDepartment" placeholder="Enter Department">
+                </div>
+                <button class="btn btn-primary" onclick="addData()" id="addBtn">Add</button>
+                <button type="button" class="btn btn-outline-success" onclick="Upd()">Update</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div id="aID" class="alert alert-success" role="alert" style="display: none;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container" style="font-size: 2.75vh;">
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>#id</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="empScript.js"></script>
+</body>
+
+</html>
